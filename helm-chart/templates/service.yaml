@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  #name: block-buster-helm-app-service
   name: {{ include "block-buster-helm-app.fullname" . }}
-  #name: {{ printf "app-%s" (.Values.name | lower | replace "_" "-") }}
   labels:
     app: {{ .Values.labels.app.name }}
 spec:
